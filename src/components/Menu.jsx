@@ -19,7 +19,7 @@ const getPhotoForCategory = (cat, index, title) => {
             images = [
                 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80',
                 'https://images.unsplash.com/photo-1481070555726-e2fe83577259?auto=format&fit=crop&w=600&q=80',
-                'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=600&q=80'
+                'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80'
             ];
         } else {
             images = [
