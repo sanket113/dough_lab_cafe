@@ -1,0 +1,8 @@
+{
+  "title": "Veg Sandwich",
+  "description": "Farm-fresh veggies nestled between thick slices of grilled sourdough, tossed with your choice of Makhani or Tandoori sauce.",
+  "price": "₹160",
+  "category": "Sourdough Sandwich",
+  "image": "",
+  "isVeg": true
+}
