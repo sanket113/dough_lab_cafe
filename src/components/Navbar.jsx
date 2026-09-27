@@ -21,7 +21,7 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <div className="nav-brand">
-                <img src="/logo.png" alt="Dough Lab Logo" className="navbar-logo" />
+                <img src="./logo.png" alt="Dough Lab Logo" className="navbar-logo" />
             </div>
             <div className="nav-links">
                 <a href="#menu">Menu</a>

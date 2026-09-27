@@ -30,7 +30,7 @@ export default function About() {
                     viewport={{ once: true }}
                 >
                     <img
-                        src="/images/gallery/1.jpg"
+                        src="./images/gallery/1.jpg"
                         alt="Dough Lab Cafe"
                         className="about-image"
                     />
