@@ -47,14 +47,15 @@ const getPhotoForCategory = (cat, index) => {
     return images[index % images.length];
 };
 
-rawItems.forEach((item, i) => {
-    if (!item.image) item.image = getPhotoForCategory(item.category, i);
-});
+const safeItems = rawItems.map((item, i) => ({
+    ...item,
+    image: item.image || getPhotoForCategory(item.category, i)
+}));
 
 export default function Menu() {
     const [activeCategory, setActiveCategory] = useState(null);
 
-    const categoriesMap = rawItems.reduce((acc, item) => {
+    const categoriesMap = safeItems.reduce((acc, item) => {
         if (!acc[item.category]) acc[item.category] = [];
         acc[item.category].push(item);
         return acc;
