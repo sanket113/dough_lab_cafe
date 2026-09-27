@@ -42,8 +42,8 @@ export default function Navbar() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                             >
-                                <a href="https://www.zomato.com/kolhapur/dough-lab-rajarampuri/order" target="_blank" rel="noreferrer">Zomato</a>
-                                <a href="https://www.swiggy.com/city/kolhapur/dough-lab-8th-lane-rajarampuri-rest1222749" target="_blank" rel="noreferrer">Swiggy</a>
+                                <a href="https://www.zomato.com/kolhapur/dough-lab-rajarampuri/order">Zomato</a>
+                                <a href="https://www.swiggy.com/city/kolhapur/dough-lab-8th-lane-rajarampuri-rest1222749">Swiggy</a>
                             </motion.div>
                         )}
                     </AnimatePresence>

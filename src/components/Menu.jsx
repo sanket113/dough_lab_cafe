@@ -6,9 +6,14 @@ import './Menu.css';
 const menuModules = import.meta.glob('../content/menu/*.json', { eager: true });
 const rawItems = Object.values(menuModules).map(mod => mod.default || mod);
 
-// Assign random unsplash photos based on category if image is empty
-const getPhotoForCategory = (cat, index) => {
+// Assign specific or random photos based on category/title
+const getPhotoForCategory = (cat, index, title) => {
     let images = [];
+
+    if (title && title.includes('Deep Dish')) {
+        return 'https://th.bing.com/th/id/OIP.KgompnIcs2HzE2M5O7s6CwHaHa';
+    }
+
     if (cat.includes('Pizza') || cat.includes('Sourdough') || cat.includes('Dough')) {
         if (cat.includes('Sandwich') || cat.includes('Bread')) {
             images = [
@@ -28,8 +33,7 @@ const getPhotoForCategory = (cat, index) => {
     } else if (cat.includes('Burger')) {
         images = [
             'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
-            'https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&w=600&q=80',
-            'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80'
+            'https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&w=600&q=80'
         ];
     } else if (cat.includes('Fries')) {
         images = [
@@ -49,7 +53,7 @@ const getPhotoForCategory = (cat, index) => {
 
 const safeItems = rawItems.map((item, i) => ({
     ...item,
-    image: item.image || getPhotoForCategory(item.category, i)
+    image: item.image || getPhotoForCategory(item.category, i, item.title)
 }));
 
 export default function Menu() {
